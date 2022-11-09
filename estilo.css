@@ -1,7 +1,7 @@
 body{
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 95%;
     
     background-color: bisque;
     border-color: blueviolet;
