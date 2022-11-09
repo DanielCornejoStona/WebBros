@@ -2,7 +2,7 @@ document.getElementById('button').addEventListener("click",botontarjet,false);
 document.getElementById('Formulario').style.display='none';
 document.getElementById('tarjeta').style.display='none';
 
-function botontarjet(){
+function botontarjet(){ 
   document.getElementById('Formulario').style.display='block';
   document.getElementById('informacion').style.display='none';
 }
