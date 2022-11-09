@@ -159,7 +159,7 @@ body{
     width: 300px;
 }
 
-#nombre,#correo,#password,#direccion,#tarjeta{
+#nombre,#correo,#password,#password2,#direccion,#tarjeta{
     font-size: 17px;
   border:  white 7px groove;
 }

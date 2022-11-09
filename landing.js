@@ -1,9 +1,14 @@
 document.getElementById('button').addEventListener("click",botontarjet,false);
 document.getElementById('Formulario').style.display='none';
+document.getElementById('tarjeta').style.display='none';
 
 function botontarjet(){
   document.getElementById('Formulario').style.display='block';
   document.getElementById('informacion').style.display='none';
+}
+
+function tarjeta(){
+  document.getElementById('tarjeta').style.display='block';
 }
 
 const formulario=document.getElementById("formulario");
@@ -15,6 +20,12 @@ var validarContra=false;
 var contra=document.getElementById('password');
 var confirmarContra=false;
 var contra2=document.getElementById('password2');
+var validarVisa=false;
+var visa=document.getElementById('tarjeta');
+var validarDireccion=false;
+var direccion=document.getElementById('direccion');
+var validarPais=false;
+var pais=document.getElementById('pais');
 
   nombre.addEventListener("blur", validar_nombre, true);
   function validar_nombre(){
@@ -33,7 +44,7 @@ var contra2=document.getElementById('password2');
         alert("Máximo 2 palabras");
       }
       else{
-        validarNombre==true;
+        validarNombre=true;
       }
     }
   }
@@ -50,7 +61,7 @@ var contra2=document.getElementById('password2');
         alert('Email no valido');
       }
       else {
-        validarNombre==true;
+        validarCorreo=true;
       }
     }
   }
@@ -84,7 +95,7 @@ var contra2=document.getElementById('password2');
           }
         }
         if(mayus==true&&minus==true&&num==true&&especial==true){
-          validarContra==true;
+          validarContra=true;
         }
         else {
           alert('La contraseña debe tener como mínimo una mayúscula, una minúscula, un número y un caracter especial');
@@ -106,22 +117,57 @@ var contra2=document.getElementById('password2');
       var contra3=document.getElementById("password2").value.trim();
       if(contra3!==document.getElementById("password").value.trim()){
         alert('No coincide con la contraseña');
-      
       }
       else {
-        confirmarContra==true;
+        confirmarContra=true;
       }
     }
   }
-   
+
+  visa.addEventListener("blur", validar_visa, true);
+  function validar_visa(){
+    if(visa.value==""){
+      return false;
+    }
+    else{
+      if(visa.value.length!=16){
+        alert("Visa no válida");
+      }
+      else{
+        validarVisa=true;
+      }
+    }
+  }
+
+  direccion.addEventListener("blur", validar_direccion, true);
+  function validar_direccion(){
+    if(direccion.value==""){
+      return false;
+    }
+    else{
+      validarDireccion=true;
+      if(validarPais==true){
+        tarjeta();
+      }
+    }
+  }
+
+  pais.addEventListener("change", validar_pais, true);
+  function validar_pais(){
+    if(pais.value=="Pais"){
+      return false;
+    }
+    else{
+      validarPais=true;
+      if(validarDireccion==true){
+        tarjeta();
+      }
+    }
+  }
 
   formulario.addEventListener("submit", (e) => {
-    e.preventDefault();
-
+    if(validarNombre==true&&validarCorreo==true&&validarContra==true&&confirmarContra==true){
+      alert("Tus datos se han validado correctamente");
+      }
+      e.preventDefault();
   })
-
-
-if(validarNombre==true&&validarCorreo==true&&validarContra==true&&confirmarContra==true){
-alert("Tus datos se han validado correctamente");
-
-}
