@@ -20,7 +20,7 @@ var validarContra=false;
 var contra=document.getElementById('password');
 var confirmarContra=false;
 var contra2=document.getElementById('password2');
-var validarVisa=false;
+var validarVisa=true;
 var visa=document.getElementById('tarjeta');
 var validarDireccion=false;
 var direccion=document.getElementById('direccion');
@@ -131,10 +131,10 @@ var pais=document.getElementById('pais');
     }
   }
 
-  visa.addEventListener("blur", validar_visa, true);
+  visa.addEventListener("change", validar_visa, true);
   function validar_visa(){
     if(visa.value==""){
-      validarVisa=false;
+      validarVisa=true;
       return false;
     }
     else{
@@ -148,7 +148,7 @@ var pais=document.getElementById('pais');
     }
   }
 
-  direccion.addEventListener("blur", validar_direccion, true);
+  direccion.addEventListener("change", validar_direccion, true);
   function validar_direccion(){
     if(direccion.value==""){
       validarDireccion=false;
@@ -177,7 +177,7 @@ var pais=document.getElementById('pais');
   }
 
   formulario.addEventListener("submit", (e) => {
-    if(validarNombre==true&&validarCorreo==true&&validarContra==true&&confirmarContra==true){
+    if(validarNombre==true&&validarCorreo==true&&validarContra==true&&confirmarContra==true&&validarVisa==true){
       alert("Tus datos se han validado correctamente");
       }
       e.preventDefault();
