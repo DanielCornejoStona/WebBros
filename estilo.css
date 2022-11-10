@@ -207,3 +207,40 @@ align-items: center;
 #sexo,#fecha,#pais{
     border:  7px groove;
 }
+
+@media only screen and (max-width: 1200px) {
+
+ body{
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    align-content: centerment: fixed;
+    background-size: cover;
+ }
+
+ .titulo{
+    display: flex;
+    flex-direction: column;
+ }
+
+ #titulo,#titulo2{
+    display: flex;
+    font-size: 60px;
+    justify-content: center;
+ }
+
+ #mensaje{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    width: 450px;
+ }
+
+ #Formulario{
+    width: 100%;
+ }
+
+}
