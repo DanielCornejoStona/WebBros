@@ -2,7 +2,7 @@ document.getElementById('button').addEventListener("click",botontarjet,false);
 document.getElementById('Formulario').style.display='none';
 document.getElementById('tarjeta').style.display='none';
 
-function botontarjet(){ 
+function botontarjet(){
   document.getElementById('Formulario').style.display='block';
   document.getElementById('informacion').style.display='none';
 }
@@ -30,6 +30,7 @@ var pais=document.getElementById('pais');
   nombre.addEventListener("blur", validar_nombre, true);
   function validar_nombre(){
     if(nombre.value==""){
+      validarNombre=false;
       return false;
     }
     else{
@@ -42,6 +43,7 @@ var pais=document.getElementById('pais');
       }
       if(cont>1){
         alert("Máximo 2 palabras");
+        validarNombre=false;
       }
       else{
         validarNombre=true;
@@ -52,12 +54,14 @@ var pais=document.getElementById('pais');
   correo.addEventListener("blur", validar_correo, true);
   function validar_correo(){
     if(correo.value==""){
+      validarCorreo=false;
       return false;
     }
     else{
       var correo1=correo.value.trim();
       re=/^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
       if(!re.test(correo1)){
+        validarCorreo=false;
         alert('Email no valido');
       }
       else {
@@ -98,12 +102,13 @@ var pais=document.getElementById('pais');
           validarContra=true;
         }
         else {
+          validarContra=false;
           alert('La contraseña debe tener como mínimo una mayúscula, una minúscula, un número y un caracter especial');
         }
       }
       else{
         alert("La contraseña debe ser entre 8 y 12 dígitos")
-        
+        validarContra=false;
       }
     }
   }
@@ -111,12 +116,14 @@ var pais=document.getElementById('pais');
   contra2.addEventListener("blur", validar_contra2, true);
   function validar_contra2(){
     if(contra.value==""||contra2.value==""){
+      confirmarContra=false;
       return false;
     }
     else{
       var contra3=document.getElementById("password2").value.trim();
       if(contra3!==document.getElementById("password").value.trim()){
         alert('No coincide con la contraseña');
+        confirmarContra=false;
       }
       else {
         confirmarContra=true;
@@ -127,11 +134,13 @@ var pais=document.getElementById('pais');
   visa.addEventListener("blur", validar_visa, true);
   function validar_visa(){
     if(visa.value==""){
+      validarVisa=false;
       return false;
     }
     else{
       if(visa.value.length!=16){
         alert("Visa no válida");
+        validarVisa=false;
       }
       else{
         validarVisa=true;
@@ -142,6 +151,7 @@ var pais=document.getElementById('pais');
   direccion.addEventListener("blur", validar_direccion, true);
   function validar_direccion(){
     if(direccion.value==""){
+      validarDireccion=false;
       return false;
     }
     else{
@@ -155,6 +165,7 @@ var pais=document.getElementById('pais');
   pais.addEventListener("change", validar_pais, true);
   function validar_pais(){
     if(pais.value=="Pais"){
+      validarPais=false;
       return false;
     }
     else{
