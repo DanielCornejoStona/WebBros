@@ -249,7 +249,7 @@ option,select{
     font-size: 17px;
 }
 
-#sexo,#fecha,#pais{
+#sexo1,#sexo2,#sexo3,#fecha,#pais{
     border:  7px groove;
 }
 
