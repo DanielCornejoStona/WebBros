@@ -1,31 +1,32 @@
-document.getElementById('button').addEventListener("click",botontarjet,false);
-document.getElementById('Formulario').style.display='none';
-document.getElementById('tarjeta').style.display='none';
+document.getElementById("button").addEventListener("click",botontarjet,false);
+document.getElementById("Formulario").style.display="none";
+document.getElementById("tarjeta").style.display="none";
 
 function botontarjet(){
-  document.getElementById('Formulario').style.display='block';
-  document.getElementById('informacion').style.display='none';
+  document.getElementById("Formulario").style.display="block";
+  document.getElementById("informacion").style.display="none";
 }
 
 function tarjeta(){
-  document.getElementById('tarjeta').style.display='block';
+  document.getElementById("tarjeta").style.display="block";
 }
+
 
 const formulario=document.getElementById("formulario");
 var validarNombre=false;
-var nombre=document.getElementById('nombre');
+var nombre=document.getElementById("nombre");
 var validarCorreo=false;
-var correo=document.getElementById('correo');
+var correo=document.getElementById("correo");
 var validarContra=false;
-var contra=document.getElementById('password');
+var contra=document.getElementById("password");
 var confirmarContra=false;
-var contra2=document.getElementById('password2');
+var contra2=document.getElementById("password2");
 var validarVisa=true;
-var visa=document.getElementById('tarjeta');
+var visa=document.getElementById("tarjeta");
 var validarDireccion=false;
-var direccion=document.getElementById('direccion');
+var direccion=document.getElementById("direccion");
 var validarPais=false;
-var pais=document.getElementById('pais');
+var pais=document.getElementById("pais");
 
   nombre.addEventListener("blur", validar_nombre, true);
   function validar_nombre(){
@@ -53,13 +54,14 @@ var pais=document.getElementById('pais');
   
   correo.addEventListener("blur", validar_correo, true);
   function validar_correo(){
+    var re;
     if(correo.value==""){
       validarCorreo=false;
       return false;
     }
     else{
       var correo1=correo.value.trim();
-      re=/^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+      re=/^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
       if(!re.test(correo1)){
         validarCorreo=false;
         alert('Email no valido');
@@ -107,7 +109,7 @@ var pais=document.getElementById('pais');
         }
       }
       else{
-        alert("La contraseña debe ser entre 8 y 12 dígitos")
+        alert("La contraseña debe ser entre 8 y 12 dígitos");
         validarContra=false;
       }
     }
@@ -181,4 +183,4 @@ var pais=document.getElementById('pais');
       alert("Tus datos se han validado correctamente");
       }
       e.preventDefault();
-  })
+  });
