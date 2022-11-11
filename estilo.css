@@ -10,6 +10,15 @@ body{
     align-items: center;
 }
 
+#img{
+    width: 170px;
+}
+
+#logo{
+    margin-top: 65px;
+    margin-left: -700px;
+}
+
 #titulo{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     justify-content: center;
@@ -21,6 +30,7 @@ body{
 }
 
 #titulo2{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: oblique;
 }
  
@@ -32,70 +42,72 @@ body{
  }
 
 #button {
+    color: white;
     width: 250px;
     margin-top: 60px;
-  font-size: 22px;
-  font-weight: 200px;
-  letter-spacing: 1px;
-  padding: 13px 20px 13px;
-  outline: 0;
-  border: 1px solid black;
-  cursor: pointer;
-  position: relative;
-  background-color: rgba(0, 0, 0, 0);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+    font-size: 22px;
+    font-weight: 200px;
+    letter-spacing: 1px;
+    padding: 13px 20px 13px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
 
 #button:after {
-  content: "";
-  background-color: #e61919;
-  width: 100%;
-  z-index: -1;
-  position: absolute;
-  height: 100%;
-  top: 7px;
-  left: 7px;
-  transition: 0.2s;
-}
+    content: "";
+    background-color: #e61919;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+    }
 
 #button:hover:after {
-  top: 0px;
-  left: 0px;
+    top: 0px;
+    left: 0px;
 }
 
 #submit {
+    color: white;
     width: 250px;
-  font-size: 22px;
-  font-weight: 200px;
-  letter-spacing: 1px;
-  padding: 13px 20px 13px;
-  outline: 0;
-  border: 1px solid black;
-  cursor: pointer;
-  position: relative;
-  background-color: rgba(0, 0, 0, 0);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+    font-size: 22px;
+    font-weight: 200px;
+    letter-spacing: 1px;
+    padding: 13px 20px 13px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
 
 #submit:after {
-  content: "";
-  background-color: #e61919;
-  width: 100%;
-  z-index: -1;
-  position: absolute;
-  height: 100%;
-  top: 7px;
-  left: 7px;
-  transition: 0.2s;
+    content: "";
+    background-color: #e61919;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
 }
 
 #submit:hover:after {
-  top: 0px;
-  left: 0px;
+    top: 0px;
+    left: 0px;
 }
 
 #mensaje{
@@ -118,6 +130,16 @@ body{
     align-content: center;
 }
 
+#img2{
+    width: 170px;
+}
+
+#logo2{
+    margin-top: 100px;
+    margin-left: -100px;
+    width: 30%;
+}
+
 .titulo{
     display: flex;
     justify-content: center;
@@ -131,9 +153,13 @@ body{
     flex-wrap: wrap;
     text-align: center;
     height: 100%;
-   align-items: center;
+    align-items: center;
     width: 350px;
     font-size: 70px;
+}
+
+.nombre{
+    margin-top: -100px;
 }
 
 #titulo2{
@@ -146,9 +172,12 @@ body{
 }
 
 #Formulario{
+    margin-left: 100px;
     display: flex;
-    width: 49%;
+    width: 70%;
     color: white;
+    margin-top: -100px;
+    height: 800px;
 }
 
 #register{
@@ -158,17 +187,33 @@ body{
     width: 300px;
 }
 
-#nombre,#correo,#password,#password2,#direccion,#tarjeta{
-    font-size: 17px;
-  border:  white 7px groove;
+::placeholder{
+    font-style: oblique;
+    /*color: #e61919;*/
 }
 
+#submit,#button{
+    font-style: oblique;
+}
+
+option,select{
+    /*color: #e61919;*/
+    font-style: oblique;
+}
+
+#nombre,#correo,#password,#password2,#direccion,#tarjeta{
+    font-size: 17px;
+    border:  white 7px groove;
+}
+
+
+
 .notificacione,.password,.nombre,.correo,.pasword,.direccion,.tarjeta,.notificaciones,.pais{
-display: flex;
-flex-wrap: wrap;
-flex-direction: column;
-margin-left: 20px;
-align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 20px;
+    align-items: center;
 }
 
 .submit{
@@ -189,7 +234,7 @@ align-items: center;
     flex-wrap: wrap;
     margin-left: 20px;
     font-size: 18px;
-     justify-content: center;
+    justify-content: center;
 }
 
 .pais{
@@ -204,13 +249,13 @@ align-items: center;
     font-size: 17px;
 }
 
-#sexo1,#sexo2,#sexo3,#fecha,#pais{
+#sexo,#fecha,#pais{
     border:  7px groove;
 }
 
 @media only screen and (max-width: 1200px) {
 
- body{
+    body{
     display: flex;
     justify-content: center;
     background-repeat: no-repeat;
@@ -220,27 +265,42 @@ align-items: center;
     background-size: cover;
  }
 
- .titulo{
-    display: flex;
-    flex-direction: column;
+ #logo{
+    margin-left: 10px;
+ }
+
+ #img{
+    width: 100px;
  }
 
  #titulo,#titulo2{
+    font-size: 50px;
     display: flex;
-    font-size: 60px;
     justify-content: center;
+    align-content: center;
+ }
+
+ .titulo{
+    width: 90%;
+    margin-left: -60px;
  }
 
  #mensaje{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    width: 450px;
  }
 
- #Formulario{
+ .mensaje{
     width: 100%;
+    display: flex;
+    margin-left: -150px;
  }
 
-}
+ #button{
+    margin-top: 20px;
+ }
+
+ #img2{
+    width: 100px;
+ }
+
+ }
