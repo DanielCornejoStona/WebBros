@@ -253,13 +253,13 @@ option,select{
     border:  7px groove;
 }
 
-@media(max-width: 600px) {
+@media(max-width: 1200px) {
 
     body{
     display: flex;
     justify-content: center;
     background-repeat: no-repeat;
-    background-size: 600px;
+    background-size: 1400px;
     background-position: center center;
     background-attachment: fixed;
     align-content: centerment: fixed;
