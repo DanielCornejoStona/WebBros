@@ -263,6 +263,7 @@ option,select{
     background-attachment: fixed;
     align-content: centerment: fixed;
     background-size: cover;
+    background-size: 1200px 800px;
  }
 
  #logo{
