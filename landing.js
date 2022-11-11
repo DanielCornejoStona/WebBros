@@ -1,6 +1,11 @@
 document.getElementById("button").addEventListener("click",botontarjet,false);
 document.getElementById("Formulario").style.display="none";
 document.getElementById("tarjeta").style.display="none";
+document.getElementById("nombrealert").style.display="none";
+document.getElementById("correoalert").style.display="none";
+document.getElementById("contraalert").style.display="none";
+document.getElementById("confirmaralert").style.display="none";
+document.getElementById("tarjetaalert").style.display="none";
 
 function botontarjet(){
   document.getElementById("Formulario").style.display="block";
@@ -43,10 +48,12 @@ var pais=document.getElementById("pais");
         }
       }
       if(cont>1){
-        alert("Máximo 2 palabras");
+        document.getElementById("nombrealert").innerHTML="Máximo 2 palabras";
+        document.getElementById("nombrealert").style.display="block";
         validarNombre=false;
       }
       else{
+        document.getElementById("nombrealert").style.display="none";
         validarNombre=true;
       }
     }
@@ -63,10 +70,12 @@ var pais=document.getElementById("pais");
       var correo1=correo.value.trim();
       re=/^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
       if(!re.test(correo1)){
+        document.getElementById("correoalert").innerHTML="Email no válido";
+        document.getElementById("correoalert").style.display="block";
         validarCorreo=false;
-        alert('Email no valido');
       }
       else {
+        document.getElementById("correoalert").style.display="none";
         validarCorreo=true;
       }
     }
@@ -101,15 +110,18 @@ var pais=document.getElementById("pais");
           }
         }
         if(mayus==true&&minus==true&&num==true&&especial==true){
+          document.getElementById("contraalert").style.display="none";
           validarContra=true;
         }
         else {
+          document.getElementById("contraalert").innerHTML="La contraseña debe tener como mínimo una mayúscula, una minúscula, un número y un caracter especial";
+          document.getElementById("contraalert").style.display="block";
           validarContra=false;
-          alert('La contraseña debe tener como mínimo una mayúscula, una minúscula, un número y un caracter especial');
         }
       }
       else{
-        alert("La contraseña debe ser entre 8 y 12 dígitos");
+        document.getElementById("contraalert").innerHTML="La contraseña debe ser entre 8 y 12 dígitos";
+        document.getElementById("contraalert").style.display="block";
         validarContra=false;
       }
     }
@@ -124,10 +136,12 @@ var pais=document.getElementById("pais");
     else{
       var contra3=document.getElementById("password2").value.trim();
       if(contra3!==document.getElementById("password").value.trim()){
-        alert('No coincide con la contraseña');
+        document.getElementById("confirmaralert").innerHTML="No coincide con la contraseña";
+        document.getElementById("confirmaralert").style.display="block";
         confirmarContra=false;
       }
       else {
+        document.getElementById("confirmaralert").style.display="none";
         confirmarContra=true;
       }
     }
@@ -141,10 +155,12 @@ var pais=document.getElementById("pais");
     }
     else{
       if(visa.value.length!=16){
-        alert("Visa no válida");
+        document.getElementById("tarjetaalert").innerHTML="Visa no válida";
+        document.getElementById("tarjetaalert").style.display="block";
         validarVisa=false;
       }
       else{
+        document.getElementById("tarjetaalert").style.display="none";
         validarVisa=true;
       }
     }
